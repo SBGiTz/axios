@@ -559,6 +559,7 @@ declare namespace axios {
     };
     formDataHeaderPolicy?: 'legacy' | 'content-only';
     redact?: string[];
+    sensitiveHeaders?: string[];
   }
 
   // Alias

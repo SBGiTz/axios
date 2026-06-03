@@ -898,6 +898,12 @@ These config options are available for requests. Only `url` is required. Request
   // If set to 0, Axios follows no redirects.
   maxRedirects: 21, // default
 
+  // `sensitiveHeaders` (Node only option) lists custom secret-bearing headers
+  // to remove from cross-origin redirects. Matching is case-insensitive.
+  // Same-origin redirects keep these headers. If `maxRedirects` is 0, this
+  // option is not used.
+  sensitiveHeaders: ['X-API-Key'],
+
   // `beforeRedirect` defines a function that Axios calls before redirect.
   // Use this to adjust the request options upon redirecting,
   // to inspect the latest response headers,

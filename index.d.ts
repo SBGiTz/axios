@@ -452,6 +452,7 @@ export interface AxiosRequestConfig<D = any> {
   };
   formDataHeaderPolicy?: 'legacy' | 'content-only';
   redact?: string[];
+  sensitiveHeaders?: string[];
 }
 
 // Alias
