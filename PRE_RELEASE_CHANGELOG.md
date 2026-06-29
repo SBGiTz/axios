@@ -4,6 +4,7 @@
 
 ## Bug Fixes
 
+- **Headers:** `AxiosHeaders#getSetCookie()` now always returns an array for present `set-cookie` values, including programmatic single-value headers. (**#11037**)
 - **Headers:** Response header parsing now preserves an empty first value for singleton Node-style headers when later duplicate header lines are present, instead of replacing it with the duplicate. (**#11036**)
 - **Params serialization:** Custom `paramsSerializer.encode` functions now receive the active `AxiosURLSearchParams` instance as `this`, matching the intended `encoder.call(this, value, defaultEncode)` behavior during query string construction. (**#11019**)
 - **Runtime and types hardening:** Guarded several edge-case crashes in cookie decoding, data URI parsing, form serialization, config merging, option validation, XHR cleanup, and Node HTTP URL serialization error handling. Type declarations now expose missing `CanceledError`, `CancelToken`, `AxiosHeaders`, `SerializerOptions`, and Cloudflare 52x status-code members that already exist at runtime. (**#10959**)
